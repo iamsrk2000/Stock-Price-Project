@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: MiniProject-APIGateway
+server:
+  port: 3333
+zuul:
+  prefix: /ms
+  routes:
+    price:
+      path: /api1/**
+      serviceId: STOCK-PRICE-API
+    Calci:
+      path: /api2/**
+      service-id: STOCK-CALC-API
